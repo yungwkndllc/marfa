@@ -20,8 +20,8 @@ let moonColors = ["#e5e5e5", "#dcdcdc", "#c9c9c9"];
 let rockColors = ["#1e0707", "#4f0404", "#581c09"];
 
 // Total bricks for each...
-let divideW = 20;
-let divideH = 30;
+let divideW = 20 * 0.8;
+let divideH = 30 * 0.8;
 
 function getPalette(xBrick, yBrick) {
   let rowToSwitch = random(baseSwitchHeight - 1, baseSwitchHeight + 1);
