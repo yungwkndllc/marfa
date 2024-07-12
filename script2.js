@@ -123,7 +123,7 @@ function setup() {
       let col = random(getPalette(bricksWide, bricksHigh));
 
       noFill();
-      stroke("red");
+      //   stroke("red");
       rect(0, 0, brickSizeW, brickSizeH);
 
       translate(0, -brickSizeH * bricksHigh);
@@ -136,22 +136,7 @@ function setup() {
   }
 }
 
-function glowOnce(whatToDo, glowColor, blurriness) {
-  let offsetX = 10;
-  let offsetY = 10;
-  drawingContext.shadowOffsetX = offsetX;
-  drawingContext.shadowOffsetY = offsetY;
-  drawingContext.shadowBlur = blurriness;
-  drawingContext.shadowColor = glowColor;
-  whatToDo();
-  drawingContext.shadowBlur = 0;
-  drawingContext.shadowColor = "transparent";
-}
-
 function makeBrick(brickSizeW, brickSizeH, color) {
-  //   console.log("width per brick- ", brickSizeW);
-  //   console.log("height per brick - ", brickSizeH);
-
   for (let x = 0; x < brickSizeW; x += resolution) {
     for (let y = 0; y < brickSizeH; y += resolution) {
       let noiseVal = noise(x * 0.01, y * 0.01, resolution);
