@@ -123,7 +123,7 @@ function setup() {
       let col = random(getPalette(bricksWide, bricksHigh));
 
       noFill();
-      //   stroke("red");
+      stroke("red");
       rect(0, 0, brickSizeW, brickSizeH);
 
       translate(0, -brickSizeH * bricksHigh);
